@@ -700,10 +700,34 @@ address{
 }
 
 
-/* .join-icon {
-    width: 20px;
-    height: 20px;
-} */
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal{
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    min-width: 528px;
+    min-height: 581px;
+
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
 
                          /*             Portfolio              */           
 
@@ -789,17 +813,17 @@ address{
 }
 .project-thumb{
     position: relative;
-    
+
     overflow: hidden;
 }
 
-.project-item:hover .project-thumb::before{
+.project-item:hover .project-overlay{
     transform: translateY(0);
     opacity: 1;
 }
 
-.project-thumb::before{
-    content: '';
+.project-overlay{
+   
     position: absolute;
     top: 0;
     left: 0;
@@ -830,8 +854,13 @@ address{
     height:auto;
 
     color: #fff;
+    opacity: 0;
+    transition: opacity 1000ms var(--timing-function);
 }
 
+.project-item:hover .project-text-link{
+    opacity: 1;
+}
 
 .card-content{
     padding: 24px 20px;
@@ -857,5 +886,7 @@ address{
 
     color: var(--text-color);
 }
+
+
 
 
