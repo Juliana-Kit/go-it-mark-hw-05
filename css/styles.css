@@ -520,6 +520,8 @@ img{
 
 
 .team-icon-link{
+    transition: color 250ms var(--timing-function);
+
     width: 100%;
     height: 100%;
 
@@ -575,6 +577,8 @@ img{
 }
 
 .client-link{
+    transition: color 250ms var(--timing-function); 
+
     width: 100%;
     height: 100%;
 
@@ -615,6 +619,8 @@ address{
 }
 
 .page-footer  .logo{
+    transition: color 250ms var(--timing-function);
+
     margin-right: 0;
     padding: 0;
 
@@ -682,6 +688,8 @@ address{
 }
 
 .join-icon-link {
+    transition: color 250ms var(--timing-function);
+    
     width: 100%;
     height: 100%;
 
@@ -707,12 +715,20 @@ address{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden{
-    visibility: hidden;
+    /* visibility: hidden; */
     opacity: 0;
     pointer-events: none;
+
+}
+
+.backdrop.is-hidden  .modal{
+    transform: translate(-50%, -50%) scale(0.9) ;
 }
 
 .modal{
@@ -720,8 +736,9 @@ address{
 
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-
+    transform: translate(-50%,-50%) scale(1) ;
+    transition: opacity 250ms var(--timing-function);
+    
     min-width: 528px;
     min-height: 581px;
 
@@ -796,6 +813,8 @@ address{
 }
 
 .project-item{
+    transition: color 250ms var(--timing-function);
+
     flex-basis: calc(100% / 3 - 60px);
 
     margin-left: 30px;
@@ -819,7 +838,7 @@ address{
 }
 
 .project-item:hover .project-overlay{
-    transform: translateY(0);
+
     opacity: 1;
 }
 
