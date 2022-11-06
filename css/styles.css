@@ -402,6 +402,7 @@ img{
 
 .occupation-item{
     position: relative;
+   display: block;
 }
 
 .occupation-item::after{
@@ -426,6 +427,7 @@ img{
     font-weight: 700;
     line-height: calc(16/14);
     text-align: center;
+   padding-bottom: 10px;
 
     bottom: 0;
     right: 50%;
